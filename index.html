@@ -148,7 +148,52 @@
         </div>
     </div>
     
-    <?php include('/views/common/script.html'); ?>
+    <script src="/public/js/require.js"></script>
+<script>
+    require.config({
+        baseUrl: '/public',
+        paths: {
+            jquery: "assets/jquery/jquery.min",
+            cookie: "assets/jquery-cookie/jquery.cookie",
+            form: "assets/jquery-form/jquery.form",
+            validate: "assets/jquery-validate/jquery-validate.min",
+            region: "assets/jquery-region/jquery.region",
+            uploadify: "assets/uploadify/jquery.uploadify.min",
+            Jcrop: "assets/Jcrop/js/Jcrop.min",
+            bootstrap: "assets/bootstrap/js/bootstrap.min",
+            datepicker: "assets/bootstrap-datepicker/js/bootstrap-datepicker.min",
+            language: "assets/bootstrap-datepicker/locales/bootstrap-datepicker.zh-CN.min",
+            template: "assets/artTemplate/template",
+            nprogress: "assets/nprogress/nprogress",
+            ckeditor: "assets/ckeditor/ckeditor"                
+        },
+        shim: {
+            bootstrap: {
+                deps: ['jquery']
+            },
+            language:{
+                deps: ['datepicker']
+            },
+            validate:{
+                deps: ['jquery']
+            },
+            uploadify:{
+                deps: ['jquery']
+            },
+            Jcrop: {
+                deps: ['jquery']
+            },
+            ckeditor: {
+                // 将插件的全局对象暴露出来
+                // ckeditor的全局对象就是CKEDITOR
+                // 不依赖其他插件所以没有deps
+                exports: 'CKEDITOR'
+            }
+        }
+    });
+    //所有页面都会加载此模块
+    require(['src/common','bootstrap']);
+</script>
 
     <script>
         require(['src/index/index']);

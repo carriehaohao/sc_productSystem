@@ -1,0 +1,67 @@
+/*侧导航b*/
+.aside {
+	position: fixed;
+	left: 0
+	top: 0;
+	width: 180px;
+	/*设置固定定位后，高度就相对于浏览器了*/
+	height: 100%;
+	background-color: #2F4050;
+}
+/* 个人资料b */
+.aside .profile {
+	background-color: #243443;
+	overflow: hidden;
+	padding-bottom: 16px;
+}
+.aside .profile .avatar {
+	width: 80px;
+	height: 80px;
+	margin: 30px auto 16px;
+}
+.aside .profile .avatar img {
+	border: 2px solid rgba(255,255,255,0.5);
+}
+.aside .profile h5 {
+	color: #FFF;
+	text-align: center;
+	font-size: 16px;
+}
+/* 个人资料e */
+
+/* 导航b */
+.aside .menu {
+	padding-top: 20px;
+}
+.aside .menu a {
+	color: #a9b0c2;
+	display: block;
+	padding-left: 20px;
+	line-height: 30px;
+}
+.aside .menu a:hover {
+	background-color: #243443;
+	color: #FFF;
+}
+.aside .menu a .fa {
+	padding-right: 5px;
+}
+.aside .menu a .arrow {
+	padding-right: 10px;
+}
+.aside .menu li ul {
+	display: none;
+}
+.aside .menu li ul a {
+	padding-left: 40px;
+}
+/* 导航e */
+/*侧导航e*/
+
+/*主体b*/
+.main {
+	min-height: 600px;
+	/*整体布局：左侧固定不动，主体部分margin-left*/
+	margin-left: 180px;
+}
+/*主体e*/

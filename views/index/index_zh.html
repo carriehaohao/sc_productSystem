@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>zh - 博学谷 - 在线学习平台</title>
+	<link rel="stylesheet" href="/public/assets/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/public/assets/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" href="/public/less/main_zh.css">
+	<link rel="stylesheet" href="/public/less/base_zh.css">
+</head>
+<body>
+	<!-- 侧边导航 -->
+	<div class="aside">
+		<!-- 个人资料 -->
+		<div class="profile">
+			<div class="avatar">
+				<img class="img-responsive img-circle" src="../../uploads/avatar.jpg" alt="头像">
+			</div>
+			<h5>博学谷</h5>
+		</div>
+		<!-- 导航 -->
+		<div class="menu">
+			<ul class="list-unstyled">
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-user"></i>
+						仪表盘
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-user"></i>
+						用户管理
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-user"></i>
+						讲师管理
+					</a>
+				</li>
+				<li>
+					<a href="javascript:;">
+						<i class="fa fa-user"></i>
+						课程管理
+						<i class="arrow pull-right">&gt;</i>
+					</a>
+					<ul class="list-unstyled">
+						<li>
+							<a href="javascript:;">课程添加</a>
+						</li>
+						<li>
+							<a href="javascript:;">课程列表</a>
+						</li>
+						<li>
+							<a href="javascript:;">课程分类</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<!-- 主体 -->
+	<div class="main">
+		<!-- 头部 -->
+		<div class="header">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<i class="fa fa-navicon"></i>
+						</a>
+					</div>
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li>
+								<a href="#">
+									<i class="fa fa-user"></i>
+									个人中心
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-sign-out"></i>
+									退出
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									<i class="fa fa-tasks"></i>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</div>
+		<!-- 身体 -->
+		<div class="body">
+			
+		</div>
+	</div>
+	<script src="/public/assets/jquery/jquery.min.js"></script>
+	<script>
+		//左侧导航交互
+		$('.menu a + ul').prev().on('click',function() {
+			$(this).next().slideToggle();
+		})
+	</script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+body {
+	background-color: #F4F6F8;
+	font-family: "Hiragino Sans GB","Microsoft YaHei","微软雅黑",tahoma,arial,simsun,"宋体";
+}
+
+a:hover,
+a:focus {
+	text-decoration: none;
+}
